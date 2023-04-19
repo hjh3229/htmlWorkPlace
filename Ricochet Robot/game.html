@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Ricochet Robot</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="game">
+        <div class="gamelogo">
+            <a href="main.html"><img src="images/logo.jpg"></a>
+        </div>
+        <div class="game-clock">
+            <div class="hourglass"></div>
+            <div class="time">0</div>
+        </div>
+        <div class="players">
+            <div class="players-info">
+                <h3>플레이어</h3>
+            </div>
+            <div class="player-list">
+                <div class="player first" data-player-index="0">
+                    <div class="player-custom">
+                        <div class="avatar">
+                            <div class="color bounce" style="background-position: 0% 0%;"></div>
+                            <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name"></div>
+                        <div class="player-order"></div>
+                        <div class="player-point">0 pt</div>
+                    </div>
+                </div>
+                <div class="player second" data-player-index="1">
+                    <div class="player-custom">
+                        <div class="avatar">
+                            <div class="color bounce" style="background-position: 0% 0%;"></div>
+                            <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name"></div>
+                        <div class="player-order"></div>
+                        <div class="player-point">0 pt</div>
+                    </div>
+                </div>
+                <div class="player third" data-player-index="2">
+                    <div class="player-custom">
+                        <div class="avatar">
+                            <div class="color bounce" style="background-position: 0% 0%;"></div>
+                            <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name"></div>
+                        <div class="player-order"></div>
+                        <div class="player-point">0 pt</div>
+                    </div>
+                </div>
+                <div class="player fourth" data-player-index="3">
+                    <div class="player-custom">
+                        <div class="avatar">
+                            <div class="color bounce" style="background-position: 0% 0%;"></div>
+                            <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name"></div>
+                        <div class="player-order"></div>
+                        <div class="player-point">0 pt</div>
+                    </div>
+                </div>
+                <div class="player fifth" data-player-index="4">
+                    <div class="player-custom">
+                        <div class="avatar">
+                            <div class="color bounce" style="background-position: 0% 0%;"></div>
+                            <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name"></div>
+                        <div class="player-order"></div>
+                        <div class="player-point">0 pt</div>
+                    </div>
+                </div>
+                <div class="player sixth" data-player-index="5">
+                    <div class="player-custom">
+                        <div class="avatar">
+                            <div class="color bounce" style="background-position: 0% 0%;"></div>
+                            <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                        </div>
+                    </div>
+                    <div class="player-info">
+                        <div class="player-name"></div>
+                        <div class="player-order"></div>
+                        <div class="player-point">0 pt</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="canvas">
+            <div class="game-custom" style="display: block;">
+                <div class="items">
+                    <div class="item">
+                        <div class="key">
+                            <span>증명 타임</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-prove" data-setting="2">
+                                <option value="0">20s</option>
+                                <option value="1">25s</option>
+                                <option value="2">30s</option>
+                                <option value="3">35s</option>
+                                <option value="4">40s</option>
+                                <option value="5">50s</option>
+                                <option value="6">55s</option>
+                                <option value="7">60s</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">
+                            <span>챌린지 타임</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-time" data-setting="0">
+                                <option value="0">1 : 00</option>
+                                <option value="1">1 : 30</option>
+                                <option value="2">2 : 00</option>
+                                <option value="3">2 : 30</option>
+                                <option value="4">3 : 00</option>
+                                <option value="5">3 : 30</option>
+                                <option value="6">4 : 00</option>
+                                <option value="7">4 : 30</option>
+                                <option value="8">5 : 00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">
+                            <span>검정색 로켓</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-black" data-setting="1">
+                                <option value="0">O</option>
+                                <option value="1">X</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">
+                            <span>첫 번째 타일</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-lefttop" data-setting="0">
+                                <option value="0">1(normal)</option>
+                                <option value="1">2(normal)</option>
+                                <option value="2">1(hard)</option>
+                                <option value="3">2(hard)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">
+                            <span>두 번째 타일</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-righttop" data-setting="0">
+                                <option value="0">1(normal)</option>
+                                <option value="1">2(normal)</option>
+                                <option value="2">1(hard)</option>
+                                <option value="3">2(hard)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">
+                            <span>세 번째 타일</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-leftbottom" data-setting="0">
+                                <option value="0">1(normal)</option>
+                                <option value="1">2(normal)</option>
+                                <option value="2">1(hard)</option>
+                                <option value="3">2(hard)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">
+                            <span>네 번째 타일</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-rightbottom" data-setting="0">
+                                <option value="0">1(normal)</option>
+                                <option value="1">2(normal)</option>
+                                <option value="2">1(hard)</option>
+                                <option value="3">2(hard)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="key">
+                            <span>목표 토큰</span>
+                        </div>
+                        <div class="value">
+                            <select id="item-setting-token" data-setting="2">
+                                <option>17</option>
+                                <option>16</option>
+                                <option>15</option>
+                                <option>14</option>
+                                <option>13</option>
+                                <option>12</option>
+                                <option>11</option>
+                                <option>10</option>
+                                <option>9</option>
+                                <option>8</option>
+                                <option>7</option>
+                                <option>6</option>
+                                <option>5</option>
+                                <option>4</option>
+                                <option>3</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="button-start">시작!</button>
+                <button class="button-create">링크 복사하기</button>
+            </div>
+            <div class="game-board" style="display: none;">
+                <div class="gameboard-lefttop"></div>
+                <div class="gameboard-righttop"></div>
+                <div class="gameboard-leftbottom"></div>
+                <div class="gameboard-rightbottom"></div>
+                <div class="gameboard-middle">
+                    <div class="token"></div>
+                    <button class="undo"></button>
+                    <button class="reset"></button>
+                </div>
+                <div class="robot-red"></div>
+                <div class="robot-yellow"></div>
+                <div class="robot-green"></div>
+                <div class="robot-blue"></div>
+            </div>
+            <div class="game-result" style="display: none;">
+                <table border="0">
+                    <tr>
+                        <td colspan="6" style="font-size: 30px;">게임 결과</td>
+                    </tr>
+                    <tr style="font-size: 20px;">
+                        <td></td>
+                        <td>플레이어</td>
+                        <td>토큰 득점</td>
+                        <td>시간 제한</td>
+                        <td>증명 실패</td>
+                        <td>총점</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/crown.jpg"></td>
+                        <td>
+                            <div class="player-custom">
+                                <div class="avatar">
+                                    <div class="color bounce" style="background-position: 0% 0%;"></div>
+                                    <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="point-token"></div>
+                        </td>
+                        <td>
+                            <div class="point-time"></div>
+                        </td>
+                        <td>
+                            <div class="point-prove"></div>
+                        </td>
+                        <td>
+                            <div class="player-point"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="player-custom">
+                                <div class="avatar">
+                                    <div class="color bounce" style="background-position: 0% 0%;"></div>
+                                    <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="point-token"></div>
+                        </td>
+                        <td>
+                            <div class="point-time"></div>
+                        </td>
+                        <td>
+                            <div class="point-prove"></div>
+                        </td>
+                        <td>
+                            <div class="player-point"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="player-custom">
+                                <div class="avatar">
+                                    <div class="color bounce" style="background-position: 0% 0%;"></div>
+                                    <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="point-token"></div>
+                        </td>
+                        <td>
+                            <div class="point-time"></div>
+                        </td>
+                        <td>
+                            <div class="point-prove"></div>
+                        </td>
+                        <td>
+                            <div class="player-point"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="player-custom">
+                                <div class="avatar">
+                                    <div class="color bounce" style="background-position: 0% 0%;"></div>
+                                    <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="point-token"></div>
+                        </td>
+                        <td>
+                            <div class="point-time"></div>
+                        </td>
+                        <td>
+                            <div class="point-prove"></div>
+                        </td>
+                        <td>
+                            <div class="player-point"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="player-custom">
+                                <div class="avatar">
+                                    <div class="color bounce" style="background-position: 0% 0%;"></div>
+                                    <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="point-token"></div>
+                        </td>
+                        <td>
+                            <div class="point-time"></div>
+                        </td>
+                        <td>
+                            <div class="point-prove"></div>
+                        </td>
+                        <td>
+                            <div class="player-point"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="player-custom">
+                                <div class="avatar">
+                                    <div class="color bounce" style="background-position: 0% 0%;"></div>
+                                    <div class="eyes bounce" style="background-position: 0% 0%;"></div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="point-token"></div>
+                        </td>
+                        <td>
+                            <div class="point-time"></div>
+                        </td>
+                        <td>
+                            <div class="point-prove"></div>
+                        </td>
+                        <td>
+                            <div class="player-point"></div>
+                        </td>
+                    </tr>
+                </table>
+                <button class="button-start">regame!</button>
+            </div>
+        </div>
+        <div class="systembar">
+            <div class="chatting">
+                <div class="chat-box"></div>
+                <input type="text" id="chat-input">
+                <button id="submit-button">전송</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+body {
+    background-image: url('images/main_background.jpg');
+    background-size: 350px;
+    background-repeat: repeat;
+    font-family: sans-serif;
+}
+
+.logo {
+    justify-content: center;
+}
+
+.logo img {
+    width: 600px
+}
+
+.main {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 60vh;
+}
+
+.porfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-name-lang {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-name {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.avatar-customizer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+.arrows {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.arrow-left {
+    width: 50px;
+    height: 50px;
+    background-image: url('images/arrows-left.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.arrow-right {
+    width: 50px;
+    height: 50px;
+    background-image: url('images/arrows-right.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.arrow-left:hover {
+    background-image: url('images/arrows-left-hover.jpg');
+}
+
+.arrow-right:hover {
+    background-image: url('images/arrows-right-hover.jpg');
+}
+
+.container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+.avatar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+  
+.color {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/color.jpg');
+    background-size: 100% 100%;
+}
+
+.eyes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/eyes.jpg');
+    background-size: 100% 100%;
+}
+
+.randomize {
+    width: 30px;
+    height: 30px;
+    background-image: url('images/randomize.jpg');
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.button-start {
+    width: 100%;
+    height: 60px;
+    background-color: #26ff1e;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.button-create {
+    width: 100%;
+    height: 60px;
+    background-color: #1e90ff;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+}
+
+.game {
+    display: block;
+}
+
+.gamelogo img {
+    width: 350px;
+    margin-top: 50px;
+}
+
+.game-clock {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    margin-left: 
+    20px;
+    margin-top: 10px;
+    
+}
+
+.hourglass {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('images/hourglass.jpg');
+}
+
+.time {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+.players {
+    width: 320px;
+    height: 600px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(125, 203, 255, 0.589);
+}
+
+.players-info h3 {
+    height: 40px;
+    background-color: #1e90ff;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.player {
+    width: 280px;
+    height: 80px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    left: 20px;
+    background-color: rgb(248, 188, 149);
+    display: flex;
+    align-items: center;
+}
+
+.player-custom {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    left: 10px;
+    display: inline-block;
+}
+
+.player-info {
+    width: 180px;
+    height: 60px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.player-name {
+    width: 85%;
+    height: 40px;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.player-order {
+    position: absolute;
+    left: 240px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+}
+
+.player-point {
+    width: 100%;
+    height: 20px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.canvas {
+    position: absolute;
+    left: 420px;
+    top: 60px;
+    width: 960px;
+    height: 840px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.game-custom {
+    height: 86%;
+    display: block;
+}
+
+.items {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.item {
+    height: calc(100% / 8 - 6px / 2);
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.key {
+    margin-left: 20px;
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+}
+
+.value {
+    margin-right: 20px;
+    flex: 0 0 45%;
+    display: flex;
+    align-items: center;
+}
+
+select {
+    width: 100%;
+    height: 80%;
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.button-game-start {
+    width: 100%;
+    height: 60px;
+    background-color: #26ff1e;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+.button-copy {
+    width: 100%;
+    height: 60px;
+    background-color: #1e90ff;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    font-size: 32px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 60px;
+}
+
+.systembar {
+    position: absolute;
+    left: 1430px;
+    top: 160px;
+    width: 450px;
+    height: 705px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.chat-box {
+    margin: 10px;
+    width: 430px;
+    height: 640px;
+    border-radius: 10px;
+    background-color: rgb(216, 227, 255);
+    overflow-y: scroll;
+}
+
+#chat-input {
+    width: 350px;
+    height: 30px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+#submit-button {
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.game-board {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    margin: 20px;
+    top: -8px;
+    left: 60px;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    border: 8px solid gray;
+    border-radius: 10px;
+}
+
+.gameboard-lefttop {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.gameboard-righttop {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.gameboard-leftbottom {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.gameboard-rightbottom {
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.gameboard-middle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 350px;
+    top: 350px;
+    z-index: 10;
+}
+
+.robot-red {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+.robot-yellow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+.robot-green {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+.robot-blue {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+}
+
+.token {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.reset {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    margin-left: 34px;
+    cursor: pointer;
+}
+
+.game-result {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(171, 255, 150);
+}
+
+table {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+}
